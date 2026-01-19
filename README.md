@@ -1,18 +1,159 @@
-# React + Vite
+# FAQ Tailwind Website
 
-https://hsb-ini-14.github.io/faq-tailwind-website/
+An interactive and responsive **FAQ (Frequently Asked Questions) Website** built with **React, Vite, and Tailwind CSS**.
+This project features smooth accordion animations, dark mode support, and an elegant UI for browsing common questions.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 **Live Demo:** [https://hsb-ini-14.github.io/faq-tailwind-website/](https://hsb-ini-14.github.io/faq-tailwind-website/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+* 📂 Accordion-style expandable FAQ items
+* 🔁 Expand All / Collapse All functionality
+* 🌙 Light / Dark mode toggle (with persistence)
+* 🎞️ Smooth height & opacity transitions
+* 📱 Fully responsive layout
+* 🎨 Styled with Tailwind CSS v4
+* ⚡ Built using Vite for fast development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **React** – UI components & state management
+* **Vite** – Fast build tool & dev server
+* **Tailwind CSS** – Utility-first styling
+* **Boxicons** – Icon set (for expand/collapse & theme toggle)
+* **GitHub Pages** – Deployment
+
+---
+
+## 📁 Project Structure
+
+```text
+faq-tailwind-website/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── FAQItem.jsx
+│   │   └── FAQList.jsx
+│   ├── data/
+│   │   └── faqData.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── vite.config.js
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/hsb-ini-14/faq-tailwind-website.git
+cd faq-tailwind-website
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Start the development server
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🌍 Deployment to GitHub Pages
+
+This project is deployed using **gh-pages**.
+
+### Steps used:
+
+1. Install gh-pages
+
+```bash
+npm install --save-dev gh-pages
+```
+
+2. Set base path in `vite.config.js`
+
+```js
+export default defineConfig({
+  base: "/faq-tailwind-website/",
+});
+```
+
+3. Add scripts to `package.json`
+
+```json
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
+```
+
+4. Deploy
+
+```bash
+npm run deploy
+```
+
+---
+
+## 🧩 How It Works
+
+* FAQ content is stored in a central `faqData.js` file
+* Each FAQ item is rendered using the reusable `FAQItem` component
+* `FAQList` manages open/close state and Expand All logic
+* React `useState` tracks:
+
+  * Currently opened FAQ item
+  * Expand All mode
+  * Dark mode toggle
+* Dark mode preference is saved to `localStorage`
+* Tailwind utility classes handle animations, layout, and theming
+
+---
+
+## 📸 Preview
+
+> to be added later
+
+---
+
+## 🙌 Acknowledgements
+
+* Icons by [Boxicons](https://boxicons.com/)
+* Styling powered by [Tailwind CSS](https://tailwindcss.com/)
+* Build tool by [Vite](https://vitejs.dev/)
+
+---
+
+## 👤 Author
+
+**Harsh Singh Bhaduria**
+
+* GitHub: [https://github.com/hsb-ini-14](https://github.com/hsb-ini-14)
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub — it really helps! 😊
